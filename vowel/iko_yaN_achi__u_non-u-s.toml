@@ -1,0 +1,11 @@
+id = "iko_yaN_achi__u_non-u-s"
+
+input_pattern = "([उऊ])(ँ?)([^\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
+
+[[substitutions]]
+pattern = "व्$5$2$6$3$7$4$8"
+
+[substitutions.rule_sequence]
+index_list = ["6.1.77"]
+text_list = ["इको यण् अचि"]
+examples = ["मधु + अत्र = मध्वत्र"]

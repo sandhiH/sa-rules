@@ -1,11 +1,12 @@
 # This rule specification serves pedagogical purpose as well (as it's referred to by /README.md as an example). Hence, it has comments pertaining to the file format.
 # If you are new to TOML file format, you might want to use https://pseitz.github.io/toml-to-json-online-converter/ to look at the equivalent json object as well.
 
-id = "iko_yaN_achi__i"
+id = "iko_yaN_achi__i_non-u-s"
 
 # The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. 
-# The below tells the following in a machine-understandable way: Look for patterns where इ or ई (possibly annotated by anunAsika, accent and other markers) is followed by अच् (also possibly annotated by anunAsika, accent and other markers).
-input_pattern = "([इई])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
+# The below tells the following in a machine-understandable way: Look for patterns where a non udAtta or svarita इ or ई (possibly annotated by anunAsika and other markers) is followed by अच् (also possibly annotated by anunAsika, accent and other markers).
+input_pattern = "([इई])(ँ?)([^\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
+# Note that the pattern above defines: 4 groups for the first vowel, 4 for the second. We've added \ for readability - that might need to be removed prior to use in some programming languages.
 # ACCENTS, OTHER_MARKERS.ALL and PRATYAHARA.ACH are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
 
 # The below is an array of substitution rules. For some other euphonic combination, it could have multiple [[substitutions]] elements to account for multiple optional forms resulting from a single rule seqnece. Each substition element has a regex pattern and a rule sequence.
@@ -13,8 +14,8 @@ input_pattern = "([इई])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.
 # The below too specifies a regular expression substitution.
 # The below tells the following in a machine-understandable way: If a string of letters matching input_pattern defined above is found: 
 # - first define paranthesized groups such as $1 representing ([इई]), $2 representing a possible anunAsika sign, etc..
-# - then, replace the matched string with य्followed by the groups of letters defined above.
-pattern = "य्$3$4$2$5$6"
+# - then, replace the matched string with य्followed by the groups of letters defined above. It is assumed that the anunAsika sequence  
+pattern = "य्$5$2$6$3$7$4$8"
 
 [substitutions.rule_sequence]
 index_list = ["6.1.77"]
