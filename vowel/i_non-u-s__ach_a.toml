@@ -1,5 +1,5 @@
 
-id = "iko_yaN_achi__i_u-s"
+id = "i_non-u-s__ach_a-s"
 
 # The below tells the following in a machine-understandable way: Look for patterns where an udAtta or svarita इ or ई (possibly annotated by anunAsika and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
 input_pattern = "([इई])(ँ?)([\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([OTHER_MARKERS.ALL]*)"

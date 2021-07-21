@@ -1,0 +1,16 @@
+
+id = "i_non-u-s__ach_non-a"
+
+# The below tells the following in a machine-understandable way: Look for patterns where an udAtta or svarita इ or ई (possibly annotated by anunAsika and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
+input_pattern = "([इई])(ँ?)([\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)"
+# Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
+
+[[substitutions]]
+
+pattern = "य्$5$2$6$3$7$4$8"
+# Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. $3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels.
+
+[substitutions.rule_sequence]
+index_list = ["6.1.77"]
+text_list = ["इको यण् अचि"]
+examples = ["दधि + अत्र = दध्यत्र"]

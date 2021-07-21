@@ -1,7 +1,7 @@
 # This rule specification serves pedagogical purpose as well (as it's referred to by /README.md as an example). Hence, it has comments pertaining to the file format.
 # If you are new to TOML file format, you might want to use https://pseitz.github.io/toml-to-json-online-converter/ to look at the equivalent json object as well.
 
-id = "iko_yaN_achi__i_non-u-s"
+id = "i_non-u-s__ach"
 
 # The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. 
 # The below tells the following in a machine-understandable way: Look for patterns where a non udAtta or svarita इ or ई (possibly annotated by anunAsika and other markers) is followed by अच् (also possibly annotated by anunAsika, accent and other markers).
