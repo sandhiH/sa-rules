@@ -14,8 +14,9 @@ input_pattern = "([इई])(ँ?)([^\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)([PRATYA
 # The below too specifies a regular expression substitution.
 # The below tells the following in a machine-understandable way: If a string of letters matching input_pattern defined above is found: 
 # - first define paranthesized groups such as $1 representing ([इई]), $2 representing a possible anunAsika sign, etc..
-# - then, replace the matched string with य्followed by the groups of letters defined above. It is assumed that the anunAsika sequence  
+# - then, replace the matched string with य्followed by the groups of letters defined above.
 pattern = "य्$5$2$6$3$7$4$8"
+# Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. $3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels. It is assumed that each of these pairs will be shortened as needed by application of further rules -eg. by replacement of ँँँ with ँ.
 
 [substitutions.rule_sequence]
 index_list = ["6.1.77"]
