@@ -1,0 +1,10 @@
+# Accents marker used within this sandhi engine.
+ACCENTS = ""
+
+# OTHER_MARKERS indicate special conditions associated with the preceeding sound, such as padAnta.
+[OTHER_MARKERS]
+PADAANTA = "ᵖ"
+
+
+[PRATYAHARA]
+ACH = "अआइईउऊऋॠऌॡएऐओऔ"

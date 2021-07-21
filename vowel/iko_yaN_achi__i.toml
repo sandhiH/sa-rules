@@ -1,0 +1,15 @@
+# This rule specification serves pedagogical purpose as well (as it's referred to by /README.md as an example). Hence, it has comments pertaining to the file format.
+id = "iko_yaN_achi__i"
+
+[input]
+expression = "([इई])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
+# ACCENTS, OTHER_MARKERS.ALL and PRATYAHARA.ACH are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
+
+[result]
+substitutions = ["य्$4$2$5$3$6"]
+# The above is an array with one element. But for some other euphonic combination, it could have multiple elements to account for multiple optional forms. 
+
+[suutra]
+index = "6.1.77"
+text = "इको यण् अचि"
+examples = ["दधि + अत्र = दध्यत्र"]
