@@ -5,9 +5,9 @@ A repository of sanskrit sandhi rules (as standardized by the pANini-patanjali-k
 We anticipate that similar repositories may be constructed for sandhi rules of other languages, and other sanskrit grammatical traditions.
 
 ## Rule format
-- General terms are defined in /terms.toml . These terms are used to more concisely specify regular expression matching and substitution rules. These terms will need to be substituted with their values specified in /terms.toml to arrive at valid regular expressions.
-- Each pANinian rule sequence gets one rule file.
-- See vowel/iko_yaN_achi__i.toml for an exmaple of the format.
+- General terms are defined in [/terms.toml](terms.toml) . These terms are used to more concisely specify regular expression matching and substitution rules. These terms will need to be substituted with their values specified in /terms.toml to arrive at valid regular expressions.
+- Each input pattern gets one rule file.
+- See <vowel/iko_yaN_achi__i.toml> for an exmaple of the format.
 
 ## Assumptions
 - We assume a particular but clear devanAgarI representation in defining our rules. 
