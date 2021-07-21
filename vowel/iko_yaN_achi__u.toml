@@ -1,12 +1,11 @@
 id = "iko_yaN_achi__u"
 
-[input]
-expression = "([उऊ])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
+input_pattern = "([उऊ])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
 
-[result]
-substitutions = ["व्$4$2$5$3$6"]
+[[substitutions]]
+pattern = "व्$4$2$5$3$6"
 
-[suutra]
-index = "6.1.77"
-text = "इको यण् अचि"
+[substitutions.rule_sequence]
+index_list = ["6.1.77"]
+text_list = ["इको यण् अचि"]
 examples = ["मधु + अत्र = मध्वत्र"]

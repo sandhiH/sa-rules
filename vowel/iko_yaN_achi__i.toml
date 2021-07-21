@@ -1,15 +1,23 @@
 # This rule specification serves pedagogical purpose as well (as it's referred to by /README.md as an example). Hence, it has comments pertaining to the file format.
+# If you are new to TOML file format, you might want to use https://pseitz.github.io/toml-to-json-online-converter/ to look at the equivalent json object as well.
+
 id = "iko_yaN_achi__i"
 
-[input]
-expression = "([इई])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
+# The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. 
+# The below tells the following in a machine-understandable way: Look for patterns where इ or ई (possibly annotated by anunAsika, accent and other markers) is followed by अच् (also possibly annotated by anunAsika, accent and other markers).
+input_pattern = "([इई])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
 # ACCENTS, OTHER_MARKERS.ALL and PRATYAHARA.ACH are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
 
-[result]
-substitutions = ["य्$4$2$5$3$6"]
-# The above is an array with one element. But for some other euphonic combination, it could have multiple elements to account for multiple optional forms. 
+# The below is an array of substitution rules. For some other euphonic combination, it could have multiple [[substitutions]] elements to account for multiple optional forms resulting from a single rule seqnece. Each substition element has a regex pattern and a rule sequence.
+[[substitutions]]
+# The below too specifies a regular expression substitution.
+# The below tells the following in a machine-understandable way: If a string of letters matching input_pattern defined above is found: 
+# - first define paranthesized groups such as $1 representing ([इई]), $2 representing a possible anunAsika sign, etc..
+# - then, replace the matched string with य्followed by the groups of letters defined above.
+pattern = "य्$3$4$2$5$6"
 
-[suutra]
-index = "6.1.77"
-text = "इको यण् अचि"
+[substitutions.rule_sequence]
+index_list = ["6.1.77"]
+# The index list above is critical (unlike the text_list and examples list below, which merely serve to make this file more readable). It should correspond to the rule number used in the central aShTAdhyAyI repository at https://ashtadhyayi.github.io/ , so that sandhi engines can read and present details of these rules from that repository to the user. Append to the sUtra number some text like "_v1" for vArtika numbe 1 or "_b1" for the first bhAShya shloka.
+text_list = ["इको यण् अचि"]
 examples = ["दधि + अत्र = दध्यत्र"]
