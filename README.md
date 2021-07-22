@@ -7,7 +7,8 @@ We anticipate that similar repositories may be constructed for sandhi rules of o
 ## Rule format
 - General terms are defined in [/terms.toml](terms.toml) . These terms are used to more concisely specify regular expression matching and substitution rules. These terms will need to be substituted with their values specified in /terms.toml to arrive at valid regular expressions.
 - Each input pattern gets one rule file.
-- See [vowel/iko_yaN_achi__i.toml](vowel/iko_yaN_achi__i.toml) for an exmaple of the format.
+- We prefer simpler regular expressions. So, rather than use markups like <yaN_accent>, we use specially defined characters like ʸ. Generally such special code-symbols are chosen from [non-sanskrit superscripts and subscripts](https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts). 
+- See [vowel/i__ach.toml](vowel/i__ach.toml) for an exmaple of the format.
 
 ## Assumptions
 - We assume a particular but clear devanAgarI representation in defining our rules. 

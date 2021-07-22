@@ -1,22 +1,28 @@
 # This rule specification serves pedagogical purpose as well (as it's referred to by /README.md as an example). Hence, it has comments pertaining to the file format.
 # If you are new to TOML file format, you might want to use https://pseitz.github.io/toml-to-json-online-converter/ to look at the equivalent json object as well.
 
-id = "i_non-u-s__ach"
+# Every rule has an ID, which will be identical to the file name. Makes it easy to refer to rules.
+id = "i__ach"
 
-# The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. 
-# The below tells the following in a machine-understandable way: Look for patterns where a non udAtta or svarita इ or ई (possibly annotated by anunAsika and other markers) is followed by अच् (also possibly annotated by anunAsika, accent and other markers).
-input_pattern = "([इई])(ँ?)([^\꣡\꣢᳡]?)([OTHER_MARKERS.ALL]*)([PRATYAHARA.ACH])(ँ?)([ACCENTS]?)([OTHER_MARKERS.ALL]*)"
-# Note that the pattern above defines: 4 groups for the first vowel, 4 for the second. We've added \ for readability - that might need to be removed prior to use in some programming languages.
-# ACCENTS, OTHER_MARKERS.ALL and PRATYAHARA.ACH are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
+# Rules are ranked by priority. Higher priority rules are applied first. Default value is 0.
+priority = 0
+
+# The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. We've added \ for readability - that might need to be removed prior to use in some programming languages.
+# The below tells the following in a machine-understandable way: Look for patterns where इ or ई (possibly annotated by anunAsika, accent and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
+input_pattern = "([इई])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+# Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
+# #ACCENTS, #OTHER_MARKERS.ALL and #PRATYAHARA.ACH are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
 
 # The below is an array of substitution rules. For some other euphonic combination, it could have multiple [[substitutions]] elements to account for multiple optional forms resulting from a single rule seqnece. Each substition element has a regex pattern and a rule sequence.
 [[substitutions]]
+
 # The below too specifies a regular expression substitution.
 # The below tells the following in a machine-understandable way: If a string of letters matching input_pattern defined above is found: 
 # - first define paranthesized groups such as $1 representing ([इई]), $2 representing a possible anunAsika sign, etc..
 # - then, replace the matched string with य्followed by the groups of letters defined above.
-pattern = "य्$5$2$6$3$7$4$8"
-# Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. $3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels. It is assumed that each of these pairs will be shortened as needed by application of further rules -eg. by replacement of ँँँ with ँ.
+pattern = "य्$5$2$6ʸ$3$7$4$8"
+# Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. ʸ$3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels.
+#  It is assumed that each of these pairs will be shortened as needed by application of further rules -eg. by replacement of ँँँ with ँ.
 
 [substitutions.rule_sequence]
 index_list = ["6.1.77"]
