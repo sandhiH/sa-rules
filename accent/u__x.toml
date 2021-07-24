@@ -1,0 +1,15 @@
+id = "u__x"
+
+priority = -5
+
+
+input_pattern = "#ACCENT.UDATTA[#ACCENT.ALL]+"
+
+[[substitutions]]
+
+pattern = "\꣡"
+
+[[substitutions.rule_sequence]]
+index_list = ["8.2.5"]
+text_list = ["एकादेश उदात्तेनोदात्तः"]
+examples = []

@@ -1,6 +1,6 @@
 id = "yaN-u-s__a"
 
-priority = 1
+priority = -4
 
 
 input_pattern = "(#ACCENT.YAN[#ACCENT.UDATTA#ACCENT.SVARITA])([#ACCENT.SVARITA#ACCENT.SANNATARA]?)"
@@ -9,7 +9,6 @@ input_pattern = "(#ACCENT.YAN[#ACCENT.UDATTA#ACCENT.SVARITA])([#ACCENT.SVARITA#A
 
 pattern = "\꣢"
 
-[substitutions.rule_sequence]
-index_list = ["8.2.4"]
-text_list = ["उदात्तस्वरितयोर्यणः स्वरितोऽनुदात्तस्य"]
-examples = []
+[[substitutions.rule_sequence]]
+index = "8.2.4"
+text = "उदात्तस्वरितयोर्यणः स्वरितोऽनुदात्तस्य"

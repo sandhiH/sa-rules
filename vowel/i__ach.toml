@@ -5,7 +5,7 @@
 id = "i__ach"
 
 # Rules are ranked by priority. Higher priority rules are applied first. Default value is 0.
-priority = 0
+priority = -61077
 
 # The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. We've added \ for readability - that might need to be removed prior to use in some programming languages.
 # The below tells the following in a machine-understandable way: Look for patterns where इ or ई (possibly annotated by anunAsika, accent and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
@@ -24,8 +24,8 @@ pattern = "य्$5$2$6ʸ$3$7$4$8"
 # Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. ʸ$3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels.
 #  It is assumed that each of these pairs will be shortened as needed by application of further rules -eg. by replacement of ँँँ with ँ.
 
-[substitutions.rule_sequence]
-index_list = ["6.1.77"]
-# The index list above is critical (unlike the text_list and examples list below, which merely serve to make this file more readable). It should correspond to the rule number used in the central aShTAdhyAyI repository at https://ashtadhyayi.github.io/ , so that sandhi engines can read and present details of these rules from that repository to the user. Append to the sUtra number some text like "_v1" for vArtika numbe 1 or "_b1" for the first bhAShya shloka.
-text_list = ["इको यण् अचि"]
+[[substitutions.rule_sequence]]
+index = "6.1.77"
+# The index above is critical (unlike the text_list and examples list below, which merely serve to make this file more readable). It should correspond to the rule number used in the central aShTAdhyAyI repository at https://ashtadhyayi.github.io/ , so that sandhi engines can read and present details of these rules from that repository to the user. Append to the sUtra number some text like "_v1" for vArtika numbe 1 or "_b1" for the first bhAShya shloka.
+text = "इको यण् अचि"
 examples = ["दधि + अत्र = दध्यत्र"]

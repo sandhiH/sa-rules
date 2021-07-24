@@ -1,0 +1,21 @@
+id = "u__x"
+
+priority = -4.5
+
+
+input_pattern = "#ACCENT.UDATTA[#ACCENT.SVARITA]"
+
+[[substitutions]]
+pattern = "\꣡"
+
+[[substitutions]]
+pattern = "\꣢"
+
+
+[[substitutions.rule_sequence]]
+index_list = ["8.2.5"]
+text_list = ["एकादेश उदात्तेनोदात्तः"]
+
+[[substitutions.rule_sequence]]
+index = "8.2.6"
+text = "स्वरितो वाऽनुदात्ते पदादौ"

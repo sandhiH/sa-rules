@@ -1,6 +1,6 @@
 id = "i__ach"
 
-priority = 0
+priority = -61077
 
 # The below tells the following in a machine-understandable way: Look for patterns where उ or ऊ (possibly annotated by anunAsika, accent and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
 input_pattern = "([उऊ])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
@@ -11,7 +11,6 @@ input_pattern = "([उऊ])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([
 pattern = "व्$5$2$6ʸ$3$7$4$8"
 # Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. ʸ$3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels.
 
-[substitutions.rule_sequence]
-index_list = ["6.1.77"]
-text_list = ["इको यण् अचि"]
-examples = ["दधि + अत्र = दध्यत्र"]
+[[substitutions.rule_sequence]]
+index = "6.1.77"
+text = "इको यण् अचि"
