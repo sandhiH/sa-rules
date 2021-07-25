@@ -3,7 +3,7 @@ id = "au__ach"
 priority = -61078
 
 # The below tells the following in a machine-understandable way: Look for patterns where औ (possibly annotated by anunAsika, accent and other markers) is followed by अच्.
-input_pattern = "([औ])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])"
+input_pattern = "([औ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])"
 # Note that the pattern above defines: 4 groups for the first vowel, 1 for the second.
 
 [[substitutions]]
