@@ -9,7 +9,7 @@ priority = -61077
 
 # The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. We've added \ for readability - that might need to be removed prior to use in some programming languages.
 # The below tells the following in a machine-understandable way: Look for patterns where इ or ई (possibly annotated by anunAsika, accent and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
-input_pattern = "([इई])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([अआउऊऋॠऌॡएऐओऔ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+input_pattern = "([इई])३?([ँ]*)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([अआउऊऋॠऌॡएऐओऔ])३?([ँ]*)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
 # Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
 # #ACCENTS, #OTHER_MARKERS.ALL are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
 
@@ -29,3 +29,13 @@ index = "6.1.77"
 # The index above is critical (unlike the text_list and examples list below, which merely serve to make this file more readable). It should correspond to the rule number used in the central aShTAdhyAyI repository at https://ashtadhyayi.github.io/ , so that sandhi engines can read and present details of these rules from that repository to the user. Append to the sUtra number some text like "_v1" for vArtika numbe 1 or "_b1" for the first bhAShya shloka.
 text = "इको यण् अचि"
 examples = ["दधि + अत्र = दध्यत्र"]
+
+
+[[substitutions]]
+# An alternate substitution
+pattern = "इ$2$3$4$5$6$7$8"
+# Above, $5 represents the second vowel being combined. $2$3$4 represent the attributes of the first vowel. $6$7$8 represent the attributes of the second.
+
+[[substitutions.rule_sequence]]
+index = "6.1.127"
+text = "इकोऽसवर्णे शाकल्यस्य ह्रस्वश्च"

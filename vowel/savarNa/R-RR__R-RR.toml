@@ -2,7 +2,7 @@ id = "R-RR__R-RR"
 
 priority = -61101
 
-input_pattern = "([ऋॠ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([ऋॠ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+input_pattern = "([ऋॠ])([३ँ]*)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([ऋॠ])([३ँ]*)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
 # Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
 
 [[substitutions]]

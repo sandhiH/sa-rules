@@ -2,7 +2,7 @@ id = "e-o__a"
 
 priority = -61109
 
-input_pattern = "([एओ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([अ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+input_pattern = "([एओ])([३ँ]*)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([अ])([३ँ]*)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
 # Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
 
 [[substitutions]]
