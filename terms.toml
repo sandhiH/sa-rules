@@ -1,3 +1,5 @@
+NO_MORE_SANDHI = ˣ
+
 # Accents marker used within this sandhi engine.
 # Below, we sequentially specify accents defined in https://en.wikipedia.org/wiki/Devanagari_Extended, https://en.wikipedia.org/wiki/Vedic_Extensions and https://en.wikipedia.org/wiki/Devanagari_(Unicode_block). U+A8E0-U+A8F1 U+1CD0-U+1CE8 U+0951-U+0952
 [ACCENTS] 
