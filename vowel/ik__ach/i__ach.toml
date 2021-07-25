@@ -9,7 +9,7 @@ priority = -61077
 
 # The below specifies a regular expression pattern. If you teach yourself some basics of regular expressions, you can contribute such rules. We've added \ for readability - that might need to be removed prior to use in some programming languages.
 # The below tells the following in a machine-understandable way: Look for patterns where इ or ई (possibly annotated by anunAsika, accent and other markers) is followed by unaccented अच् (also possibly annotated by anunAsika, accent and other markers).
-input_pattern = "([इई])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+input_pattern = "([इई])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
 # Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
 # #ACCENTS, #OTHER_MARKERS.ALL and #PRATYAHARA.ACH are defined in /terms.toml. They should be substituted in order to get valid regular expression substitution rules.
 

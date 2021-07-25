@@ -1,0 +1,16 @@
+id = "o__ach"
+
+priority = -61078
+
+# The below tells the following in a machine-understandable way: Look for patterns where ओ (possibly annotated by anunAsika, accent and other markers) is followed by अच्.
+input_pattern = "([ओ])([३ँ]?)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([#PRATYAHARA.ACH])"
+# Note that the pattern above defines: 4 groups for the first vowel, 1 for the second.
+
+[[substitutions]]
+
+pattern = "अ$2$3$4व्$5"
+# Above, $2$3$4 represents the anunAsikatva-s, accents, the other markings  of the first vowel.
+
+[[substitutions.rule_sequence]]
+index = "6.1.78"
+text = "एचोऽयवायावः"
