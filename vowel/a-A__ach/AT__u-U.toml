@@ -1,0 +1,15 @@
+id = "AT__u-U"
+
+priority = -61086.5
+
+input_pattern = "(#OTHER_MARKERS.PADAANTA[आ])([३ँ]+)([#ACCENTS.ALL]?)(#OTHER_MARKERS.PADAANTA[#OTHER_MARKERS.ALL]*)([उऊ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+# Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
+
+[[substitutions]]
+
+pattern = "#OTHER_MARKERS.PADAANTAऔ$2$6$3$7$4$8"
+# Above, $5 represents the second vowel being combined. $2$6 Represents the anunAsikatva-s of the two vowels. $3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels.
+
+[[substitutions.rule_sequence]]
+index = "6.1.90"
+text = "आटश्च"

@@ -1,0 +1,15 @@
+id = "R-RR__R-RR"
+
+priority = -61101
+
+input_pattern = "([ऋॠ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)([ऋॠ])([३ँ]+)([#ACCENTS.ALL]?)([#OTHER_MARKERS.ALL]*)"
+# Note that the pattern above defines: 4 groups for the first vowel, 4 for the second.
+
+[[substitutions]]
+
+pattern = "ॠ$2$6$3$7$4$8"
+# Above, $2$6 Represents the anunAsikatva-s of the two vowels. $3$7 represents the accents of the two vowels. $4$8 represents the other markings associated with the condition of the two vowels.
+
+[[substitutions.rule_sequence]]
+index = "6.1.101"
+text = "अकः सवर्णे दीर्घः"
